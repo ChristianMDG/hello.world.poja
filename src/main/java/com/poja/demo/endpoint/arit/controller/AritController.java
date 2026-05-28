@@ -22,6 +22,7 @@ public class AritController {
 
   @GetMapping("/multiplication")
   public int multiplication(@RequestParam Integer a, @RequestParam Integer b) {
+
     return aritService.multiplication(a, b);
   }
 
