@@ -2,10 +2,7 @@ package com.poja.demo.endpoint.arit.controller;
 
 import com.poja.demo.endpoint.arit.service.AritService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/arit")
@@ -13,22 +10,22 @@ import org.springframework.web.bind.annotation.RestController;
 public class AritController {
   private final AritService aritService;
 
-  @PostMapping("/sum")
+  @GetMapping("/sum")
   public int sum(@RequestParam Integer a, @RequestParam Integer b) {
     return aritService.sum(a, b);
   }
 
-  @PostMapping("/soustraction")
+  @GetMapping("/soustraction")
   public int soustraction(@RequestParam Integer a, @RequestParam Integer b) {
     return aritService.soustraction(a, b);
   }
 
-  @PostMapping("/multiplication")
+  @GetMapping("/multiplication")
   public int multiplication(@RequestParam Integer a, @RequestParam Integer b) {
     return aritService.multiplication(a, b);
   }
 
-  @PostMapping("/division")
+  @GetMapping("/division")
   public int division(@RequestParam Integer a, @RequestParam Integer b) {
     return aritService.division(a, b);
   }
