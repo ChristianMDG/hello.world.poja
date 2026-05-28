@@ -11,23 +11,27 @@ public class AritController {
   private final AritService aritService;
 
   @GetMapping("/sum")
-  public int sum(@RequestParam Integer a, @RequestParam Integer b) {
+  public int sum(
+      @RequestParam(required = false) Integer a, @RequestParam(required = false) Integer b) {
     return aritService.sum(a, b);
   }
 
   @GetMapping("/soustraction")
-  public int soustraction(@RequestParam Integer a, @RequestParam Integer b) {
+  public int soustraction(
+      @RequestParam(required = false) Integer a, @RequestParam(required = false) Integer b) {
     return aritService.soustraction(a, b);
   }
 
   @GetMapping("/multiplication")
-  public int multiplication(@RequestParam Integer a, @RequestParam Integer b) {
+  public int multiplication(
+      @RequestParam(required = false) Integer a, @RequestParam(required = false) Integer b) {
 
     return aritService.multiplication(a, b);
   }
 
   @GetMapping("/division")
-  public int division(@RequestParam Integer a, @RequestParam Integer b) {
+  public int division(
+      @RequestParam(required = false) Integer a, @RequestParam(required = false) Integer b) {
     return aritService.division(a, b);
   }
 }
